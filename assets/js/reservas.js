@@ -29,8 +29,11 @@ reservaForm.addEventListener('submit', function(event) {
   const fechaSalida = document.getElementById('fechaSalida').value;
 
 if (!nombre || !apellido || !dni || !cantidadPersonas || !fechaEntrada || !fechaSalida) {
-    const mensajeError = document.getElementById('mensajeError');
-    mensajeError.innerHTML = 'Por favor, complete todos los campos.';
+    
+    Swal.fire(
+      '¿Ha ingresado todos los campos?',
+      'Verifique nuevamente',
+    );
     return;
   }
   // Crea un objeto de reserva con los valores de los campos

@@ -243,3 +243,62 @@ button[type="submit"]:hover {
       width: 100%;
   }
 }
+
+/* Buscador de Ciudad*/
+
+.search-form {
+  margin: 20px;
+}
+
+.searchbox{
+  padding: 10px 30px;
+  background-color: #d36c5c;
+  max-width: 480px;
+  margin: 0px auto;
+  border-radius: 3px;
+}
+.search{
+  width: 100%;
+  background-color: #69332b;
+  border: none;
+  font-size: 1rem;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.clima-tarjeta{
+  background: #f3533a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 3px;
+  display: none;
+}
+.ciudad{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.fecha{
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.temperatura-img{
+  width: auto;
+}
+.temperatura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.temp{
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.clima{
+  font-size: 1.8;
+  margin-bottom: 1rem;
+}

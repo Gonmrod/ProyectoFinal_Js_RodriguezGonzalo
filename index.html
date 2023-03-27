@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="./assets/js/appClima.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Reservas</title>
 </head>
 <body>
@@ -31,7 +33,24 @@
 
     <button type="submit">Reservar</button>
   </form>
+    <div class="search-form">
+    <form id="search-formulario">
+      <div class="searchbox">
+        <input type="text" autocomplete="off" placeholder="Buscar ciudad..." class="search" id="searchbox">
+      </div>
+    </form>
+    </div>
+    <div class="clima-tarjeta" id="weatherCard">
+      <div class="ciudad" id="city">Entre Rios, Arg</div>
+      <div class="fecha" id="date">27/03/2023</div>
+      <div class="temperatura">
+        <img src="/assets/animated/day.svg" class= "temperatura-img" alt="" id="temp-img">
+        <div class="temp" id="temperatura">14c</div>
+      </div>
+      <div class="clima" id="weather">Sol</div>
+      <div class="rango" id="range">12c / 18c</div>
 
+    </div>
   <h2>Reservas:</h2>
   <div class="cambio">
     <label for="dniBusqueda">Buscar por DNI:</label>
