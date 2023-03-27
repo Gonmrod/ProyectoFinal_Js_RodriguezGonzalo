@@ -1,0 +1,245 @@
+body {
+  background-color: #f3533a;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: #5acfc9;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #5acfc9;
+  margin-top: 20px;
+}
+.cambio{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+form {
+  background-color: #fa9f42;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+#reservasList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+#reservasList li {
+  background-color: #8ad879;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #074c9b;
+  font-weight: bold;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+#reservasList li p {
+  margin: 0;
+}
+
+#dniBusqueda {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+}
+
+#buscarBtn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#buscarBtn:hover {
+  background-color: #555;
+}
+
+#eliminarBtn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#eliminarBtn:hover {
+  background-color: #555;
+}
+#mensajeError {
+  color: white;
+  margin-left: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.busquedaReserva {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.busquedaReserva label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.busquedaReserva input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.busquedaReserva button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0c77ff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.busquedaReserva button:hover {
+  background-color: #074c9b;
+}
+
+.eliminarReserva {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.eliminarReserva:hover {
+  background-color: #cc0000;
+}
+#reservasList{
+  color: white;
+}
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 768px) {
+  #reservaForm label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  #reservaForm input {
+    width: 250px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  #reservaForm button {
+    margin-left: 160px;
+  }
+  #dniBusqueda {
+    width: 150px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  #buscarBtn {
+    margin-left: 10px;
+  }
+  #eliminarBtn {
+    margin-left: 10px;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 767px) {
+  #reservaForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  #reservaForm input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  #reservaForm button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #dniBusqueda {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  #buscarBtn {
+    width: 100%;
+  }
+  #eliminarBtn {
+      margin-top: 2px;
+      width: 100%;
+  }
+}
