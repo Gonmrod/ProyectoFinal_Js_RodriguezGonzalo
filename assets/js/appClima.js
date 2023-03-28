@@ -25,21 +25,45 @@ const api = {
     tempImg.src = src;
   }
 
-  async function search(query){
+  const getTemperature = (query) => {
+    const apiUrl = `${api.url}?q=${query}&appid=${api.key}&lang=es`;
+    return new Promise((resolve, reject) => {
+        fetch(apiUrl)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Error al obtener los datos');
+                }
+            })
+            .then(data => {
+                resolve(data);
+            })
+            .catch(error => reject(error));
+    });
+};
+
+
+async function search(query) {
     try {
-      const response = await fetch(`${api.url}?q=${query}&appid=${api.key}&lang=es`);
-      const data = await response.json();
-      tarjeta.style.display = 'block';
-      city.innerHTML = `${data.name}, ${data.sys.country}`;
-      data.date = (new Date()).toLocaleDateString();
-      temperatura.innerHTML = `${toCelcius(data.main.temp)}°C`;
-      weather.innerHTML = data.weather[0].description;
-      range.innerHTML = `${toCelcius(data.main.temp_min)}°C / ${toCelcius(data.main.temp_max)}°C`
-      updateImage(data);
-    } catch(err){
-      console.log(err)
+        getTemperature(query)
+            .then(data => {
+                tarjeta.style.display = 'block';
+                city.innerHTML = `${data.name}, ${data.sys.country}`;
+                data.date = (new Date()).toLocaleDateString();
+                temperatura.innerHTML = `${toCelcius(data.main.temp)}°C`;
+                weather.innerHTML = data.weather[0].description;
+                range.innerHTML = `${toCelcius(data.main.temp_min)}°C / ${toCelcius(data.main.temp_max)}°C`
+                updateImage(data);
+            }
+            )
+            .catch(error => console.error(error));
+
+    } catch (err) {
+        console.log(err)
     }
-  }
+}
+
 
   function toCelcius(kelvin) {
     return Math.round(kelvin - 273.15);
