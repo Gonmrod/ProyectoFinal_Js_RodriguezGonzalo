@@ -53,7 +53,7 @@ async function search(query) {
                 data.date = (new Date()).toLocaleDateString();
                 temperatura.innerHTML = `${toCelcius(data.main.temp)}°C`;
                 weather.innerHTML = data.weather[0].description;
-                range.innerHTML = `${toCelcius(data.main.temp_min)}°C / ${toCelcius(data.main.temp_max)}°C`
+                range.innerHTML = `${toCelcius(data.main.temp_min)}°C / ${toCelcius(data.main.temp_max)}°C`;
                 updateImage(data);
             }
             )
